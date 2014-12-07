@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "What am I reading?",
+  "description": "Outputs most used words of current page.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_title": "What is most frequent word here?"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
