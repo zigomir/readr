@@ -1,14 +1,10 @@
 <!doctype html>
 <html>
-  <head></head>
+  <head>
+    <script src="popup.js"></script>
+  </head>
   <body>
-    <h1>lol</h1>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var bg = chrome.extension.getBackgroundPage();
-        console.log(bg);
-      });
-    </script>
+    <h1>Most used word</h1>
+    <div id="page-word"></div>
   </body>
 </html>
