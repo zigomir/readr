@@ -9,7 +9,7 @@
     if (message.popupOpen) {
       chrome.tabs.executeScript(null, {file: 'bower_components/underscore/underscore-min.js'});
       chrome.tabs.executeScript(null, {file: 'bower_components/jquery/dist/jquery.min.js'});
-      chrome.tabs.executeScript(null, {file: 'word-counter.js'});
+      chrome.tabs.executeScript(null, {file: 'src/word-counter.js'});
     }
 
     if (message.words) {
