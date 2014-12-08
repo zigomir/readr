@@ -20,5 +20,10 @@
     "tabs",
     "http://*/*",
     "https://*/*"
-  ]
+  ],
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  }
 }
