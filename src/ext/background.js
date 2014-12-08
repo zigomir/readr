@@ -4,18 +4,21 @@
 (function() {
   'use strict';
 
+  var popupResponder;
   // https://developer.chrome.com/extensions/messaging
   chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.popupOpen) {
       chrome.tabs.executeScript(null, {file: 'bower_components/underscore/underscore-min.js'});
       chrome.tabs.executeScript(null, {file: 'bower_components/jquery/dist/jquery.min.js'});
       chrome.tabs.executeScript(null, {file: 'src/word-counter.js'});
+
+      popupResponder = sendResponse; // save for later
+      return true; // this return here is significant!
     }
 
     if (message.words) {
-      var mostUsedWord = message.words[0];
-      var views = chrome.extension.getViews({type: 'popup'});
-      views[0].document.getElementById('page-word').innerHTML =  mostUsedWord.word + ' - ' + mostUsedWord.count;
+      popupResponder(message.words);
+      return true;
     }
   });
 }());

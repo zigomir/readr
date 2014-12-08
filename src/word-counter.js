@@ -6,13 +6,15 @@
   function wordCounts(object) {
     var result = [];
     for (var key in object) {
-      var count = object[key];
+      if (object.hasOwnProperty(key)) {
+        var count = object[key];
 
-      if (key.length > 5) {
-        result.push({
-          word: key,
-          count: count
-        });
+        if (key.length > 5) {
+          result.push({
+            word: key,
+            count: count
+          });
+        }
       }
     }
 
