@@ -1,0 +1,12 @@
+src_files:
+  	- "tests/js/bundle.js"
+
+framework: jasmine
+launchers: PhantomJS, Chrome, Safari, Firefox
+
+launch_in_dev:
+  - Chrome
+#  - Safari
+#  - Firefox
+launch_in_ci:
+  - PhantomJS

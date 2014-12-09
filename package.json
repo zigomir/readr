@@ -6,7 +6,8 @@
     "watch-background": "watchify lib/background/index.js -d -o dist/js/background.js -v",
     "watch-content": "watchify lib/content/index.js -d -o dist/js/content.js -v",
     "watch-popup": "watchify lib/popup/index.js -d -o dist/js/popup.js -v",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testem",
+    "watch-tests": "watchify tests/index.js -d -o tests/js/bundle.js -v"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "author": "Ziga Vidic <zigomir@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "testem": "^0.6.24",
     "underscore": "^1.7.0",
     "watchify": "^2.1.1"
   }
