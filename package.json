@@ -1,0 +1,21 @@
+{
+  "name": "readr",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm run watch-background & npm run watch-content & npm run watch-popup",
+    "watch-background": "watchify lib/background/index.js -d -o dist/js/background.js -v",
+    "watch-content": "watchify lib/content/index.js -d -o dist/js/content.js -v",
+    "watch-popup": "watchify lib/popup/index.js -d -o dist/js/popup.js -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zigomir/readr.git"
+  },
+  "author": "Ziga Vidic <zigomir@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "underscore": "^1.7.0",
+    "watchify": "^2.1.1"
+  }
+}
