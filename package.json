@@ -9,6 +9,11 @@
     "test": "testem",
     "watch-tests": "watchify tests/index.js -d -o tests/js/bundle.js -v"
   },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zigomir/readr.git"
@@ -16,6 +21,8 @@
   "author": "Ziga Vidic <zigomir@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "react": "^0.12.2",
+    "reactify": "^0.17.1",
     "testem": "^0.6.24",
     "underscore": "^1.7.0",
     "watchify": "^2.1.1"
