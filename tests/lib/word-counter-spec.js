@@ -2,7 +2,7 @@ var wordCounter = require('../../lib/word-counter');
 
 describe('word counter', function() {
   it('should count words', function() {
-    var result = wordCounter('hudascena hudascena fkyea fkyea fkyea'.split(/\W+/));
+    var result = wordCounter('Hudascena hudaScena fkyea fkyea fkyea'.split(/\W+/));
 
     expect(result[0]).toEqual({ word: 'fkyea', count: 3 });
     expect(result[1]).toEqual({ word: 'hudascena', count: 2 });
